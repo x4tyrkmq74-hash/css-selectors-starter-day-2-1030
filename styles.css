@@ -433,7 +433,7 @@ input, select{
     select all of the inputs on focus (by tag name/pseudo-class) on the page
 */
 /* ----- */
-input:focus{
+input:focus, select:focus, textarea:focus{
     outline: 4px solid var(--orange);
     outline-offset: 2px;
     border: none;
@@ -445,7 +445,7 @@ input:focus{
     select all of the inputs on focus (by tag name/pseudo-class) on the page
 */
 /* ----- */
-textarea:focus{
+input:focus, select:focus, textarea:focus{
     outline-color: var(--dv-dk-blue);
 }
 
@@ -681,6 +681,11 @@ input[type="submit"]:focus{
     gap: 12px;
 }
 
+/* (fix: title across 3 columns like screenshot) */
+#software h3{
+    grid-column: 1/-1;
+}
+
 /* ----- */
 /* 
     TO DO:
@@ -715,6 +720,9 @@ input[type="submit"]:focus{
 /* ----- */
 #software svg{
     stroke: var(--dk-gray);
+    width: 44px;          /* fix: stop svg from stretching */
+    height: 44px;         /* fix: match screenshot icon size */
+    margin: 0 auto;       /* fix: center icons */
 }
 
 /* ----- */
